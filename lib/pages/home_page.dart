@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 8),
                         const Text(
-                          'Selamat datang kembali! Berikut ringkasan katalog\nproduk Anda hari ini.',
+                          'Selamat datang kembali! Berikut ringkasan katalog\nproduk Anda.',
                           style: TextStyle(
                             fontSize: 13,
                             color: Colors.black54,
