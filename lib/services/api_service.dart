@@ -72,7 +72,7 @@ class ApiService {
     String githubUrl,
   ) async {
     final response = await http.post(
-      Uri.parse('$url/products/submit'),
+      Uri.parse('$url/api/products/submit'),
       headers: {
         'Authorization': 'Bearer $token',
         'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ class ApiService {
       }),
     );
 
-    if (response.statusCode == 200) {
+    if (response.statusCode == 200 || response.statusCode == 201) {
       return true;
     } else {
       throw Exception('Gagal Submit Tugas');

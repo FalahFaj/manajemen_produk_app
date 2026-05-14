@@ -206,17 +206,11 @@ class _AddProductPageState extends State<AddProductPage> {
                 width: double.infinity,
                 height: 55,
                 decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [
-                      Color(0xFF0052D4),
-                      Color(0xFF4364F7),
-                      Color(0xFF6FB1FC),
-                    ],
-                  ),
+                  color: const Color(0xFF1E56C1),
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF0052D4).withOpacity(0.3),
+                      color: const Color(0xFF1E56C1).withValues(alpha: 0.3),
                       blurRadius: 15,
                       offset: const Offset(0, 8),
                     ),
