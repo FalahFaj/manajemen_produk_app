@@ -4,6 +4,8 @@ import '../models/product_model.dart';
 import '../services/api_service.dart';
 import 'add_product_page.dart';
 import 'submit_page.dart';
+import 'login_page.dart';
+import '../storage/token_storage.dart';
 
 class HomePage extends StatefulWidget {
   final String token;
@@ -58,6 +60,20 @@ class _HomePageState extends State<HomePage> {
             fontSize: 20,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () async {
+              await TokenStorage.deleteToken();
+              if (context.mounted) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LoginPage()),
+                );
+              }
+            },
+            icon: const Icon(Icons.logout, color: Color(0xFF1E56C1)),
+          ),
+        ],
       ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
